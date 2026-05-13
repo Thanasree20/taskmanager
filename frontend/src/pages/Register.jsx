@@ -20,7 +20,7 @@ const Register = () => {
     try {
 
       await axios.post(
-        "http://localhost:5000/api/auth/register",
+        "https://taskmanager-oqou.onrender.com/api/auth/register",
         formData
       );
 

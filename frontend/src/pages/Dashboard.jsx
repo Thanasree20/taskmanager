@@ -32,7 +32,7 @@ const Dashboard = () => {
     try {
 
       const res = await axios.get(
-        "http://localhost:5000/api/tasks",
+        "https://taskmanager-oqou.onrender.com/api/tasks",
         {
           headers: {
             Authorization: token
@@ -61,7 +61,7 @@ const Dashboard = () => {
     }
 
     await axios.post(
-      "http://localhost:5000/api/tasks",
+      "https://taskmanager-oqou.onrender.com/api/tasks",
       taskData,
       {
         headers: {
@@ -83,7 +83,7 @@ const Dashboard = () => {
   const deleteTask = async (id) => {
 
     await axios.delete(
-      `http://localhost:5000/api/tasks/${id}`,
+      `https://taskmanager-oqou.onrender.com/api/tasks/${id}`,
       {
         headers: {
           Authorization: token
@@ -98,7 +98,7 @@ const Dashboard = () => {
   const updateStatus = async (task, status) => {
 
     await axios.put(
-      `http://localhost:5000/api/tasks/${task.id}`,
+      `https://taskmanager-oqou.onrender.com/api/tasks/${task.id}`,
       {
         ...task,
         status
